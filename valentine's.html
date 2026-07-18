@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>For Favoured ❤️</title>
+
+<style>
+body{
+    height:100vh;
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(#ffb6d9,#ffd9ec);
+    font-family:Arial;
+    text-align:center;
+}
+.card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    width:80%;
+    box-shadow:0 5px 20px #999;
+}
+button{
+    padding:12px 20px;
+    margin:10px;
+    border:0;
+    border-radius:20px;
+    font-size:16px;
+}
+.yes{
+    background:#ff4d88;
+    color:white;
+}
+.no{
+    background:#ddd;
+}
+input{
+    padding:10px;
+    border-radius:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card" id="box">
+
+<h1>Hi Favoured 🌸</h1>
+
+<p>
+I made this little surprise for you.<br><br>
+
+I've enjoyed the moments we've shared,
+and I'd really like to see you again 😊
+</p>
+
+<h2>Would you like to hang out sometime? ❤️</h2>
+
+<button class="yes" onclick="yes()">Yes 😊</button>
+<button class="no" onclick="no()">Maybe another time</button>
+
+</div>
+
+<script>
+
+function yes(){
+
+document.getElementById("box").innerHTML=`
+
+<h1>Yay! 🎉</h1>
+
+<p>
+That made me smile 😊<br>
+Choose a day that works for you:
+</p>
+
+<input type="date" id="date">
+
+<br><br>
+
+<button class="yes" onclick="done()">
+Confirm ❤️
+</button>
+
+`;
+
+}
+
+function no(){
+
+document.getElementById("box").innerHTML=`
+
+<h1>No worries 🌸</h1>
+
+<p>
+Thanks for checking my little surprise 😊
+</p>
+
+`;
+
+}
+
+function done(){
+
+let d=document.getElementById("date").value;
+
+document.getElementById("box").innerHTML=`
+
+<h1>Perfect! 🎉❤️</h1>
+
+<p>
+Looking forward to seeing you, Favoured 😊<br><br>
+${d}
+</p>
+
+`;
+
+}
+
+</script>
+
+</body>
+</html>
